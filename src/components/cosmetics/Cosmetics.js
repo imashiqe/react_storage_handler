@@ -1,5 +1,6 @@
 import React from 'react';
-import add from '../../utilities/calculate';
+import { add } from '../../utilities/calculate';
+// import add from '../../utilities/calculate';
 
 const Cosmetics = () => {
     const first = 55;
