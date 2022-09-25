@@ -1,48 +1,16 @@
-import React from 'react';
+import React, { useEffect ,useState} from 'react';
 import Cosmetic from '../Cosmetic/Cosmetic';
 // import { add } from '../../utilities/calculate';
 // import add from '../../utilities/calculate';
 
-const Cosmetics = () => {
-     const cosmetics = 
-     [
-        {
-          "id": "63306cd50a7cb24bce3158fe",
-          "price": "$1,422.07",
-          "name": "Sharpe Rhodes",
-          "favoriteFruit": "banana"
-        },
-        {
-          "id": "63306cd51fbd7679da05d867",
-          "price": "$3,161.37",
-          "name": "Ora Cohen",
-          "favoriteFruit": "banana"
-        },
-        {
-          "id": "63306cd5f352395b896164ce",
-          "price": "$2,282.91",
-          "name": "Palmer Hamilton",
-          "favoriteFruit": "apple"
-        },
-        {
-          "id": "63306cd5849d63560e9e570a",
-          "price": "$1,033.86",
-          "name": "Minerva Mayer",
-          "favoriteFruit": "strawberry"
-        },
-        {
-          "id": "63306cd5a6beafc7fc1b9889",
-          "price": "$1,634.79",
-          "name": "Shanna Fry",
-          "favoriteFruit": "strawberry"
-        },
-        {
-          "id": "63306cd54e664b4527bbdd15",
-          "price": "$1,586.30",
-          "name": "Brown Brady",
-          "favoriteFruit": "strawberry"
-        }
-      ]
+const Cosmetics = (data) => {
+    const [cosmetics, setCosmetics ] = useState([]);
+    useEffect(() => {
+        fetch('data.json')
+        .then(res=> res.json())
+        .then(data => setCosmetics(data))
+    },[])
+   
     //  [
     //     {id: 1, name: 'Alta', price:100 },
     //     {id: 2, name: 'Palish', price:200 },
