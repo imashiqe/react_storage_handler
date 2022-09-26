@@ -5,12 +5,12 @@ import './Cosmetic.css';
 const Cosmetic = (props) => {
     const {name,price,id} = props.cosmetic;
     const addToCart = () =>{
-       addToDb(id)
+       addToDb(id);
     };
     const removeFromCart = id =>{
-        console.log('removing', id);
+      removeFromDb(id);
     }
-    const  addToCartwithParam = () => addToCart(id);
+   
 
     return (
         <div className='product'>
