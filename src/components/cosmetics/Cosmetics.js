@@ -21,6 +21,8 @@ const Cosmetics = (data) => {
     // const first = 55;
     // const second = 66;
     // const  total = add(first , second);
+
+    
     return (
         <div>
             <h1>Welcome to  my cosmetic Store</h1>
